@@ -51,6 +51,10 @@ localPort = 3001
 externalPort = 3000
 
 [[ports]]
+localPort = 3002
+externalPort = 3002
+
+[[ports]]
 localPort = 5000
 externalPort = 80
 
@@ -59,9 +63,9 @@ localPort = 5001
 externalPort = 3001
 
 [deployment]
-deploymentTarget = "static"
-build = ["npm", "--prefix", "dashboard", "run", "build"]
-run = ["sh", "-c", "cd backend && npm install && npm run build && node dist/server.js"]
+deploymentTarget = "autoscale"
+build = ["sh", "-c", "npm --prefix dashboard run build && npm --prefix backend run build"]
+run = ["node", "backend/dist/server.js"]
 publicDir = "dashboard/dist"
 
 [userenv]
