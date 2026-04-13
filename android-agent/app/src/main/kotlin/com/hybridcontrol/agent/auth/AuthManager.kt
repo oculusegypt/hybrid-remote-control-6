@@ -18,7 +18,7 @@ import java.util.concurrent.TimeUnit
 
 /**
  * Handles authentication against the custom backend REST API.
- * No Supabase dependency — all auth goes through /api/auth/* endpoints.
+ * No Supabase dependency — all auth goes through /api/auth/ endpoints.
  */
 class AuthManager(private val context: Context) {
 

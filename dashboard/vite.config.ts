@@ -10,6 +10,12 @@ export default defineConfig({
     strictPort: true,
     allowedHosts: true,
     proxy: {
+      '/backend-api/ws': {
+        target: 'ws://localhost:3001',
+        ws: true,
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/backend-api/, ''),
+      },
       '/backend-api': {
         target: 'http://localhost:3001',
         changeOrigin: true,

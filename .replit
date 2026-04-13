@@ -67,3 +67,4 @@ publicDir = "dashboard/dist"
 [userenv]
 
 [userenv.shared]
+JWT_SECRET = "666e2e2804d0611c79a4627fbace3a85eaf01bc205daaff2de982461662e69296c242697bdffa60fdde917a3ae5b2e56"
